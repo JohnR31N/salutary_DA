@@ -1,0 +1,7 @@
+base: baseline_syncdist.yaml
+
+method: alia
+alia_manifest: ./data/alia/cars196
+alia_train_mode: append
+
+run_name: cars196_preact_resnet18_alia_generic_syncdist

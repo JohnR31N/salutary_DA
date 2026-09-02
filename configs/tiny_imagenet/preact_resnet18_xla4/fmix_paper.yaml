@@ -1,0 +1,52 @@
+dataset: tiny_imagenet
+data_dir: ./data
+model: preact_resnet18
+preact_stem_bn_relu: true
+preact_pytorch_default_init: true
+method: fmix
+cross_device_shuffle: true
+
+# JAX batch_size is global. This matches XLA4 per-device 32 * 4 devices.
+batch_size: 128
+epochs: 200
+max_train_steps: -1
+max_eval_steps: -1
+
+# Use the paper hyperparameters, but select/report epochs on a held-out
+# validation split so the Tiny-ImageNet test split is not used during training.
+validation_split: 0.1
+val_source: test
+eval_on_test_each_epoch: false
+final_test: true
+final_test_checkpoint: best
+
+learning_rate: 0.1
+momentum: 0.9
+weight_decay: 0.0001
+lr_schedule: step
+min_learning_rate: 0.0
+lr_decay_epochs: [150, 180]
+lr_decay_rate: 0.1
+
+fmix_alpha: 1.0
+fmix_decay: 3.0
+fmix_prob: 1.0
+fmix_no_repeat: true
+fmix_per_sample: false
+
+basic_aug: true
+seed: 0
+
+save_csv: true
+output_dir: ./outputs
+output_name: ""
+run_name: tiny_imagenet_preact_resnet18_fmix_paper_val_xla4
+
+save_checkpoint: true
+checkpoint_dir: ./checkpoints
+save_best_only: true
+resume_checkpoint: ""
+
+distributed: true
+sync_batch_stats: true
+log_time: true

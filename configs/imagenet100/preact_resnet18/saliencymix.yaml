@@ -1,0 +1,9 @@
+base: baseline_syncdist.yaml
+
+method: saliencymix
+saliencymix_alpha: 1.0
+saliencymix_prob: 0.5
+sal_basic_aug: false
+sal_aug_recipe: imagenet
+saliency_dir: ./data
+run_name: imagenet100_preact_resnet18_saliencymix_syncdist_e400

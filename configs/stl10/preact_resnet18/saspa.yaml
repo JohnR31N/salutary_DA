@@ -1,0 +1,7 @@
+base: baseline_syncdist.yaml
+
+method: saspa
+saspa_manifest: ./data/saspa/stl10
+saspa_replacement_probability: 0.1
+
+run_name: stl10_preact_resnet18_saspa_generic_syncdist

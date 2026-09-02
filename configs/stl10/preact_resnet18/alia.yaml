@@ -1,0 +1,7 @@
+base: baseline_syncdist.yaml
+
+method: alia
+alia_manifest: ./data/alia/stl10
+alia_train_mode: append
+
+run_name: stl10_preact_resnet18_alia_generic_syncdist

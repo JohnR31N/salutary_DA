@@ -1,0 +1,16 @@
+# JAX/Flax classifier training, evaluation, scoring, and visualization.
+-r requirements-common.txt
+
+# Linux is the TPU training target. Non-Linux installs remain CPU/local-dev.
+jax[tpu]==0.6.2; sys_platform == "linux"
+jax==0.6.2; sys_platform != "linux"
+jaxlib==0.6.2
+flax==0.10.7
+optax==0.2.8
+orbax-checkpoint==0.11.13
+absl-py==2.4.0
+
+opencv-contrib-python==4.13.0.92
+matplotlib==3.10.9
+PyYAML==6.0.3
+wandb>=0.19,<1

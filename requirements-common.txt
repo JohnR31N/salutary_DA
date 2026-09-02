@@ -1,0 +1,8 @@
+# Backend-neutral data and artifact dependencies shared by JAX and Torch/XLA.
+# Keep this file free of jax, libtpu, torch, and torch-xla.
+numpy==2.2.6
+Pillow==12.2.0
+tqdm==4.68.2
+tensorflow-cpu==2.20.0
+tensorflow-datasets==4.9.10
+protobuf==6.32.0

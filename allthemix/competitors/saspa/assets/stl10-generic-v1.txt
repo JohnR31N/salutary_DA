@@ -1,0 +1,20 @@
+a photo showing {class_name} outdoors during daytime.
+a close-up photo showing {class_name}.
+a photo showing {class_name} viewed from the side.
+a photo showing {class_name} viewed from the front.
+a photo showing {class_name} in motion.
+a photo showing {class_name} at a distance.
+a photo showing {class_name} with a softly blurred background.
+a photo showing {class_name} under an overcast sky.
+a photo showing {class_name} in bright natural light.
+a photo showing {class_name} in soft evening light.
+a photo showing {class_name} near water.
+a photo showing {class_name} beside vegetation.
+a photo showing {class_name} on open ground.
+a photo showing {class_name} against a clear sky.
+a photo showing {class_name} in a wide scene.
+a detailed photo showing {class_name}.
+a centered photo showing {class_name}.
+a photo showing {class_name} partially occluded by its surroundings.
+a photo showing {class_name} from a low viewpoint.
+a photo showing {class_name} from a high viewpoint.

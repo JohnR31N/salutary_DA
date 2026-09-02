@@ -1,0 +1,7 @@
+base: baseline.yaml
+
+method: diffusemix
+diffusemix_manifest: ./data/diffusemix/cifar10/paper_1x_256_seed0
+diffusemix_train_mode: append
+
+run_name: cifar10_preact_resnet18_diffusemix_paper_1x_256

@@ -1,0 +1,9 @@
+base: baseline.yaml
+
+method: baseline
+epochs: 400
+run_name: imagenet100_preact_resnet18_baseline_syncdist_e400
+
+distributed: true
+cross_device_shuffle: false
+sync_batch_stats: true

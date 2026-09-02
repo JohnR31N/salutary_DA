@@ -1,0 +1,7 @@
+base: baseline_syncdist.yaml
+
+method: cutmix
+cutmix_alpha: 1.0
+cutmix_prob: 1.0
+cutmix_no_repeat: true
+run_name: imagenet100_preact_resnet18_cutmix_syncdist_e400

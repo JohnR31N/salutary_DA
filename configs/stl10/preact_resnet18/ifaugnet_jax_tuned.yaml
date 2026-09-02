@@ -1,0 +1,29 @@
+base: ifaugnet.yaml
+
+# JAX-stabilized validation-tuning profile. The paper-reference schedule stays
+# in ifaugnet.yaml; this profile keeps its architecture and transform family.
+run_name: stl10_preact_resnet18_ifaugnet_jax_tuned
+
+ifaugnet_influence_steps: 1000
+ifaugnet_learning_rate: 0.0001
+
+# Keep the paper transform expressive while preventing one influence update
+# from destroying class semantics in the fixed-s_test JAX approximation.
+ifaugnet_pretrain_identity_l2_weight: 0.001
+ifaugnet_identity_l2_weight: 0.02
+ifaugnet_label_preservation_weight: 0.1
+ifaugnet_influence_clip_value: 1.0
+ifaugnet_gradient_clip_norm: 1.0
+ifaugnet_zero_nonfinite_grads: true
+
+# Apply a useful policy as stochastic regularization rather than transforming
+# every retraining example. Tune this value only on the held-out split.
+ifaugnet_learned_aug_probability: 0.25
+
+ifaugnet_log_every: 25
+ifaugnet_health_check_every: 10
+ifaugnet_restore_last_healthy_pretrain: true
+ifaugnet_restore_best_healthy: true
+ifaugnet_min_accuracy_retention: 0.90
+ifaugnet_max_tau_saturation_fraction: 0.50
+ifaugnet_collapse_patience: 5

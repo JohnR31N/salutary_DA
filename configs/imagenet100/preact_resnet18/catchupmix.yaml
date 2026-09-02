@@ -1,0 +1,8 @@
+base: baseline_syncdist.yaml
+
+method: catchupmix
+catchupmix_alpha: 1.0
+catchupmix_cutmix_alpha: 1.0
+catchupmix_num_layers: 5
+catchupmix_no_repeat: true
+run_name: imagenet100_preact_resnet18_catchupmix_syncdist_e400

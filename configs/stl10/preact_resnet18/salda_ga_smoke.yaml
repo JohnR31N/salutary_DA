@@ -1,0 +1,11 @@
+base: salda_ga_timing20.yaml
+
+# Compile and execute exactly one update, followed by one complete Vdev readout.
+salda_ga_stop_epoch: 1
+max_train_steps: 1
+salda_ga_audit_mode: true
+salda_ga_profile_components: true
+
+run_name: stl10_salda_ga_smoke_last_score_seed0
+output_name: metrics.csv
+wandb_run_name: stl10_salda_ga_smoke_last_score_seed0

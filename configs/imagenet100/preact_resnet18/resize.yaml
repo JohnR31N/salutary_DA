@@ -1,0 +1,7 @@
+base: baseline_syncdist.yaml
+
+method: resizemix
+resizemix_scope_min: 0.1
+resizemix_scope_max: 0.8
+resizemix_prob: 1.0
+run_name: imagenet100_preact_resnet18_resize_syncdist_e400

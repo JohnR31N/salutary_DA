@@ -1,0 +1,32 @@
+dataset: stl10
+data_dir: ./data
+model: preact_resnet18
+method: saliencymix
+cross_device_shuffle: false
+
+batch_size: 128
+epochs: 200
+validation_split: 0.5
+val_source: test
+eval_on_test_each_epoch: false
+final_test: true
+final_test_checkpoint: best
+
+learning_rate: 0.1
+momentum: 0.9
+weight_decay: 0.0005
+lr_schedule: cosine
+
+saliencymix_alpha: 1.0
+saliencymix_prob: 0.5
+basic_aug: false
+sal_basic_aug: true
+saliency_dir: ./data
+seed: 0
+save_csv: true
+run_name: stl10_preact_resnet18_saliencymix
+save_checkpoint: true
+save_best_only: true
+log_time: true
+distributed: false
+sync_batch_stats: false

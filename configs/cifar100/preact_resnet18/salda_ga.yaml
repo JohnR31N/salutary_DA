@@ -1,0 +1,66 @@
+dataset: cifar100
+data_dir: ./data
+model: preact_resnet18
+method: mixup
+cross_device_shuffle: false
+
+batch_size: 128
+epochs: 200
+max_train_steps: -1
+max_eval_steps: -1
+
+validation_split: 0.5
+val_source: test
+eval_on_test_each_epoch: false
+val_select_split_fraction: 0.0
+final_test: true
+final_test_checkpoint: best
+
+learning_rate: 0.1
+momentum: 0.9
+weight_decay: 0.0001
+lr_schedule: cosine
+min_learning_rate: 0.0
+lr_decay_epochs: [100, 150]
+lr_decay_rate: 0.1
+
+mixup_alpha: 0.2
+basic_aug: true
+deterministic_data: true
+seed: 0
+
+salda_ga_mode: "off"
+salda_ga_parameter_scope: classifier_head
+salda_ga_validation_direction_mode: full
+salda_ga_validation_batch_size: 500
+salda_ga_validation_reanchor_interval: 50
+salda_ga_stop_epoch: -1
+salda_ga_maximum_rows: 128
+salda_ga_soft_label_dose: 0.01
+salda_ga_max_weight_deviation: 0.05
+salda_ga_weight_temperature: 1.0
+salda_ga_minimum_relative_ess: 0.9
+salda_ga_minimum_gain: 0.0
+salda_ga_minimum_label_margin: 0.0
+salda_ga_minimum_relative_label_margin: 0.0
+salda_ga_fallback_enabled: false
+salda_ga_fallback_soft_label_dose: 0.01
+salda_ga_audit_mode: false
+salda_ga_profile_components: false
+
+save_csv: true
+output_dir: ./outputs
+output_name: ""
+run_name: cifar100_preact_resnet18_salda_ga
+save_checkpoint: true
+save_best_only: true
+resume_checkpoint: ""
+pretrained_checkpoint: ""
+
+wandb: true
+wandb_project: allthemix-probes
+wandb_mode: online
+log_time: true
+distributed: true
+sync_batch_stats: true
+early_stop_enabled: false

@@ -1,0 +1,6 @@
+base: metaaugment.yaml
+
+run_name: cub200_preact_resnet18_metaaugment_stable
+
+# Backward-compatible alias. The stable policy dynamics are now the formal CUB
+# MetaAugment configuration in metaaugment.yaml.

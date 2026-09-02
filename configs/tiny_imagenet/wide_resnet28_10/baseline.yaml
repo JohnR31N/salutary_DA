@@ -1,0 +1,39 @@
+dataset: tiny_imagenet
+data_dir: ./data
+model: wide_resnet28_10
+method: baseline
+
+batch_size: 128
+epochs: 300
+max_train_steps: -1
+max_eval_steps: -1
+
+validation_split: 0.1
+val_source: test
+eval_on_test_each_epoch: false
+final_test: true
+final_test_checkpoint: best
+
+learning_rate: 0.1
+momentum: 0.9
+weight_decay: 0.0005
+lr_schedule: step
+min_learning_rate: 0.0
+lr_decay_epochs: [150, 225]
+lr_decay_rate: 0.1
+
+basic_aug: true
+seed: 0
+
+save_csv: true
+output_dir: ./outputs
+output_name: ""
+run_name: tiny_imagenet_wide_resnet28_10_baseline
+
+save_checkpoint: true
+checkpoint_dir: ./checkpoints
+save_best_only: true
+resume_checkpoint: ""
+
+distributed: true
+log_time: true

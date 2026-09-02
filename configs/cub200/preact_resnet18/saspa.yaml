@@ -1,0 +1,6 @@
+base: baseline_syncdist.yaml
+
+method: saspa
+saspa_manifest: ./data/saspa/cub200
+saspa_replacement_probability: 0.1
+run_name: cub200_preact_resnet18_saspa_syncdist

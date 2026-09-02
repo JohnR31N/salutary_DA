@@ -1,0 +1,27 @@
+dataset: stl10
+data_dir: ./data
+model: preact_resnet18
+method: baseline
+
+batch_size: 128
+epochs: 200
+validation_split: 0.5
+val_source: test
+eval_on_test_each_epoch: false
+final_test: true
+final_test_checkpoint: best
+
+learning_rate: 0.1
+momentum: 0.9
+weight_decay: 0.0005
+lr_schedule: cosine
+
+basic_aug: true
+seed: 0
+save_csv: true
+run_name: stl10_preact_resnet18_baseline
+save_checkpoint: true
+save_best_only: true
+log_time: true
+distributed: false
+sync_batch_stats: false

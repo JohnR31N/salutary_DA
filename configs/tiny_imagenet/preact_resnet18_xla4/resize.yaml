@@ -1,0 +1,50 @@
+dataset: tiny_imagenet
+data_dir: ./data
+model: preact_resnet18
+preact_stem_bn_relu: true
+preact_pytorch_default_init: true
+method: resizemix
+cross_device_shuffle: true
+
+# JAX batch_size is global. This matches AllTheMiXLA xla4 global batch 128.
+batch_size: 128
+epochs: 300
+max_train_steps: -1
+max_eval_steps: -1
+
+validation_split: 0.1
+val_source: test
+eval_on_test_each_epoch: false
+final_test: true
+final_test_checkpoint: best
+
+learning_rate: 0.1
+momentum: 0.9
+weight_decay: 0.0001
+lr_schedule: step_cosine
+min_learning_rate: 0.0001
+lr_decay_epochs: [150]
+lr_decay_rate: 0.1
+
+resizemix_scope_min: 0.1
+resizemix_scope_max: 0.63
+resizemix_prob: 0.75
+resizemix_per_sample: true
+
+basic_aug: false
+aug_recipe: tiny_official
+seed: 0
+
+save_csv: true
+output_dir: ./outputs
+output_name: ""
+run_name: tiny_imagenet_preact_resnet18_resizemix_xla4
+
+save_checkpoint: true
+checkpoint_dir: ./checkpoints
+save_best_only: true
+resume_checkpoint: ""
+
+distributed: true
+sync_batch_stats: true
+log_time: true

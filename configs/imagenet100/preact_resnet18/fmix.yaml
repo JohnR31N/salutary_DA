@@ -1,0 +1,8 @@
+base: baseline_syncdist.yaml
+
+method: fmix
+fmix_alpha: 1.0
+fmix_decay: 3.0
+fmix_prob: 1.0
+fmix_per_sample: true
+run_name: imagenet100_preact_resnet18_fmix_syncdist_e400

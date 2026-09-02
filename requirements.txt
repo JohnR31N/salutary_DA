@@ -1,0 +1,3 @@
+# Backward-compatible alias for the default JAX training environment.
+# New setup scripts should reference requirements-jax.txt explicitly.
+-r requirements-jax.txt

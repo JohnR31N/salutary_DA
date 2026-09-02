@@ -1,0 +1,17 @@
+base: salda_ga.yaml
+
+method: baseline
+run_name: stl10_preact_resnet18_salda_ga_origin_baseline30
+
+salda_ga_mode: baseline
+salda_ga_stop_epoch: 30
+salda_ga_score_start_epoch: 20
+salda_ga_score_stop_epoch: 21
+salda_ga_action_start_epoch: 20
+salda_ga_action_stop_epoch: 21
+
+# After all 30 epochs, restore the best-Vdev checkpoint and read Vtest once.
+final_test: true
+final_test_checkpoint: best
+save_checkpoint: true
+save_best_only: true

@@ -1,0 +1,22 @@
+base: ifaugnet.yaml
+
+# Diagnostic reproduction of the strict supplement optimizer. This profile is
+# expected to expose collapse on the 224x224 JAX extension and is not the main
+# reportable CUB configuration.
+run_name: cub200_preact_resnet18_ifaugnet_paper_probe
+
+ifaugnet_influence_steps: 10000
+ifaugnet_learning_rate: 0.01
+ifaugnet_pretrain_identity_l2_weight: 0.0
+ifaugnet_identity_l2_weight: 0.0
+ifaugnet_label_preservation_weight: 0.0
+ifaugnet_influence_clip_value: 0.0
+ifaugnet_learned_aug_probability: 1.0
+ifaugnet_gradient_clip_norm: 0.0
+ifaugnet_zero_nonfinite_grads: false
+ifaugnet_log_every: 100
+ifaugnet_restore_last_healthy_pretrain: false
+ifaugnet_restore_best_healthy: false
+ifaugnet_min_accuracy_retention: 0.50
+ifaugnet_max_tau_saturation_fraction: 0.80
+ifaugnet_collapse_patience: 10001

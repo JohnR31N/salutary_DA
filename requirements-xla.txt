@@ -1,0 +1,21 @@
+# Isolated PyTorch/XLA environment for offline generative competitors.
+# Do not install this file into the JAX environment: both stacks own libtpu.
+-r requirements-common.txt
+
+# openai-clip 1.0.1 imports pkg_resources, removed in setuptools 81.
+setuptools==80.9.0
+
+# PyTorch and PyTorch/XLA public versions must match exactly.
+torch==2.9.0
+torch-xla[tpu]==2.9.0
+torchvision==0.24.0
+
+# Match SaSPA's official environment; later releases removed this pipeline.
+diffusers==0.32.2
+huggingface-hub>=0.34,<1
+transformers==4.48.3
+accelerate>=1.1,<2
+safetensors>=0.4
+sentencepiece>=0.2
+opencv-python-headless==4.13.0.92
+openai-clip==1.0.1

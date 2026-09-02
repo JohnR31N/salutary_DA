@@ -1,0 +1,30 @@
+dataset: svhn_cropped
+data_dir: ./data
+model: preact_resnet18
+method: cutmix_sumix
+
+batch_size: 128
+epochs: 200
+validation_split: 0.1
+val_source: test
+eval_on_test_each_epoch: false
+final_test: true
+
+learning_rate: 0.1
+momentum: 0.9
+weight_decay: 0.0005
+lr_schedule: cosine
+
+cutmix_alpha: 0.2
+cutmix_prob: 1.0
+cutmix_no_repeat: true
+sumix_gamma: 0.5
+sumix_semantic_scale: 8.0
+basic_aug: false
+seed: 0
+save_csv: true
+run_name: svhn_cropped_preact_resnet18_cutmix_sumix
+save_checkpoint: true
+save_best_only: true
+log_time: true
+distributed: false

@@ -1,0 +1,23 @@
+base: baseline.yaml
+
+method: metaaugment
+run_name: cifar10_preact_resnet18_metaaugment
+
+metaaugment_policy_learning_rate: 0.001
+metaaugment_policy_momentum: 0.9
+metaaugment_policy_weight_decay: 0.0005
+metaaugment_policy_nesterov: false
+metaaugment_inner_learning_rate: 0.1
+metaaugment_learn_inner_learning_rate: true
+metaaugment_epsilon: 0.1
+metaaugment_num_transforms_per_sample: 1
+metaaugment_cutout_size: 16
+metaaugment_sampler_update_epochs: 1
+metaaugment_sampler_history_epochs: 50
+metaaugment_translate_const: 10.0
+
+cross_device_shuffle: false
+distributed: true
+sync_batch_stats: true
+wandb: true
+wandb_project: allthemix

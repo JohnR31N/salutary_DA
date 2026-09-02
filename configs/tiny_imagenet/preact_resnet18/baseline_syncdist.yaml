@@ -1,0 +1,8 @@
+base: baseline.yaml
+
+method: baseline
+run_name: tiny_imagenet_preact_resnet18_baseline_syncdist
+
+distributed: true
+cross_device_shuffle: false
+sync_batch_stats: true

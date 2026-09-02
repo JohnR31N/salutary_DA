@@ -1,0 +1,12 @@
+base: baseline.yaml
+
+method: diffusemix
+diffusemix_manifest: ./data/diffusemix/stl10/table_256_s20_9x
+diffusemix_train_mode: append
+
+# Step-matched against the 200-epoch STL-10 baseline:
+# baseline: floor(4500 / 128) * 200 = 7000 updates
+# DiffuseMix append: floor(45000 / 128) * 20 = 7020 updates
+epochs: 20
+
+run_name: stl10_preact_resnet18_diffusemix_9x_256_s20_stepmatched

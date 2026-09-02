@@ -1,0 +1,9 @@
+base: ifaugnet_jax_stable.yaml
+
+# Validation-only candidate motivated by the observed health boundary near
+# 6e-5. Keep every other policy and classifier setting fixed.
+run_name: cifar10_preact_resnet18_ifaugnet_jax_lowpeak
+
+ifaugnet_learning_rate: 0.00005
+ifaugnet_min_learning_rate: 0.000005
+

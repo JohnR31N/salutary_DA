@@ -1,0 +1,4 @@
+# Test environment. Runtime deployments should use one backend file directly.
+-r requirements-jax.txt
+
+pytest==9.0.3

@@ -1,0 +1,25 @@
+dataset: oxford_iiit_pet
+data_dir: ./data
+model: preact_resnet18
+method: baseline
+
+batch_size: 64
+epochs: 200
+validation_split: 0.1
+val_source: test
+eval_on_test_each_epoch: false
+final_test: true
+
+learning_rate: 0.05
+momentum: 0.9
+weight_decay: 0.0005
+lr_schedule: cosine
+
+basic_aug: true
+seed: 0
+save_csv: true
+run_name: oxford_iiit_pet_preact_resnet18_baseline
+save_checkpoint: true
+save_best_only: true
+log_time: true
+distributed: true

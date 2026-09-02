@@ -1,0 +1,10 @@
+base: baseline_syncdist.yaml
+
+method: diffusemix
+# Full-resolution 512px paper-1x artifact (not compacted to 224px).
+diffusemix_manifest: ./data/diffusemix/cub200/paper_1x_512_full_seed0
+diffusemix_train_mode: append
+run_name: cub200_preact_resnet18_diffusemix_paper_1x_512_full
+
+wandb: true
+wandb_project: allthemix

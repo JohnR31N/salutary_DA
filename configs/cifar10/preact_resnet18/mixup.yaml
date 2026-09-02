@@ -1,0 +1,43 @@
+dataset: cifar10
+data_dir: ./data
+model: preact_resnet18
+method: mixup
+cross_device_shuffle: false
+
+batch_size: 128
+epochs: 200
+max_train_steps: -1
+max_eval_steps: -1
+
+validation_split: 0.1
+val_source: test
+eval_on_test_each_epoch: false
+final_test: true
+final_test_checkpoint: best
+
+learning_rate: 0.1
+momentum: 0.9
+weight_decay: 0.0001
+lr_schedule: cosine
+min_learning_rate: 0.0
+lr_decay_epochs: [100, 150]
+lr_decay_rate: 0.1
+
+mixup_alpha: 1.0
+
+basic_aug: true
+seed: 0
+
+save_csv: true
+output_dir: ./outputs
+output_name: ""
+run_name: cifar10_preact_resnet18_mixup
+
+save_checkpoint: true
+checkpoint_dir: ./checkpoints
+save_best_only: true
+resume_checkpoint: ""
+
+log_time: true
+distributed: false
+sync_batch_stats: false

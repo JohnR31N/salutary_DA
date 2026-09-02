@@ -1,0 +1,8 @@
+base: salda_ga_timing20.yaml
+
+# Preserve the registered legacy timing workload through a tracked config.
+salda_ga_stop_epoch: 10
+
+run_name: stl10_salda_ga_timing10_last_score_seed0
+output_name: metrics.csv
+wandb_run_name: stl10_salda_ga_timing10_last_score_seed0

@@ -1,0 +1,9 @@
+base: ifaugnet.yaml
+
+# Strict reference schedule without policy-health restoration.
+run_name: stl10_preact_resnet18_ifaugnet_paper_probe
+ifaugnet_restore_best_healthy: false
+ifaugnet_collapse_patience: 10001
+# Pin the strict-reference probability; the base config uses the
+# val-selected value.
+ifaugnet_learned_aug_probability: 1.0

@@ -1,0 +1,9 @@
+base: baseline_syncdist.yaml
+
+method: cutmix_sumix
+cutmix_alpha: 1.0
+cutmix_prob: 1.0
+cutmix_no_repeat: true
+sumix_gamma: 0.5
+sumix_semantic_scale: 10.0
+run_name: imagenet100_preact_resnet18_cutmix_sumix_syncdist_e400

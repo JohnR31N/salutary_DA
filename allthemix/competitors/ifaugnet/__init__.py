@@ -1,0 +1,63 @@
+"""Integrated IF-AugNet method-specific components."""
+
+from allthemix.competitors.ifaugnet.influence import (
+    classifier_logits,
+    compute_s_test,
+    conjugate_gradient,
+    influence_up_loss,
+    last_layer_grad_per_example,
+    s_test_residual_norm,
+)
+from allthemix.competitors.ifaugnet.models import (
+    AugmentationNetwork,
+    FeatureDiscriminator,
+    ImageDiscriminator,
+    ParameterYieldNetwork,
+    TransformationDecoder,
+)
+from allthemix.competitors.ifaugnet.steps import (
+    AugNetRetrainStrategy,
+    augnet_influence_train_step,
+    augnet_pretrain_step,
+    compute_batch_s_test,
+    compute_batch_s_test_residual,
+    compute_feature_s_test,
+    compute_feature_s_test_residual,
+    create_augment_state,
+    create_discriminator_state,
+    denormalize_images,
+    extract_s_test_feature_batch,
+    get_classifier_head_params,
+    infer_feature_dim,
+    normalization_arrays,
+    tree_average,
+)
+
+__all__ = [
+    "AugNetRetrainStrategy",
+    "AugmentationNetwork",
+    "FeatureDiscriminator",
+    "ImageDiscriminator",
+    "ParameterYieldNetwork",
+    "TransformationDecoder",
+    "augnet_influence_train_step",
+    "augnet_pretrain_step",
+    "classifier_logits",
+    "compute_batch_s_test",
+    "compute_batch_s_test_residual",
+    "compute_feature_s_test",
+    "compute_feature_s_test_residual",
+    "compute_s_test",
+    "conjugate_gradient",
+    "create_augment_state",
+    "create_discriminator_state",
+    "denormalize_images",
+    "extract_s_test_feature_batch",
+    "get_classifier_head_params",
+    "infer_feature_dim",
+    "influence_up_loss",
+    "last_layer_grad_per_example",
+    "normalization_arrays",
+    "s_test_residual_norm",
+    "tree_average",
+]

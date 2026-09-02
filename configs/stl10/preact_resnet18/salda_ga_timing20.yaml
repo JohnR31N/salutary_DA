@@ -1,0 +1,78 @@
+base: salda_ga.yaml
+
+# Freeze every scientific and protocol value used by this measurement.
+dataset: stl10
+model: preact_resnet18
+method: mixup
+batch_size: 128
+epochs: 200
+seed: 0
+data_seed: -1
+resnet_stem_type: cifar
+preact_stem_bn_relu: false
+preact_pytorch_default_init: false
+validation_split: 0.5
+val_source: test
+eval_on_test_each_epoch: false
+val_select_split_fraction: 0.0
+max_eval_steps: -1
+distributed: true
+sync_batch_stats: true
+cross_device_shuffle: false
+basic_aug: true
+aug_recipe: basic
+shuffle_buffer_size: 10000
+deterministic_data: true
+strict_determinism: false
+train_subset_fraction: 1.0
+debug_train_source: none
+early_stop_enabled: false
+save_csv: true
+log_time: true
+wandb: true
+wandb_project: allthemix-probes
+wandb_mode: online
+
+# Freeze the complete optimizer and online MixUp recipe used by the hash seal.
+learning_rate: 0.1
+momentum: 0.9
+nesterov: false
+weight_decay: 0.0005
+lr_schedule: cosine
+min_learning_rate: 0.0
+warmup_epochs: 0
+lr_decay_epochs: [100, 150]
+lr_decay_rate: 0.1
+mixup_alpha: 1.0
+
+# Keep the 200-epoch optimizer schedule while measuring exactly 20 full epochs.
+salda_ga_mode: score_only
+salda_ga_parameter_scope: classifier_head
+salda_ga_validation_direction_mode: full
+salda_ga_validation_batch_size: 400
+salda_ga_validation_reanchor_interval: 50
+salda_ga_maximum_rows: 128
+salda_ga_soft_label_dose: 0.01
+salda_ga_max_weight_deviation: 0.05
+salda_ga_weight_temperature: 1.0
+salda_ga_minimum_relative_ess: 0.9
+salda_ga_minimum_gain: 0.0
+salda_ga_minimum_label_margin: 0.0
+salda_ga_minimum_relative_label_margin: 0.0
+salda_ga_fallback_enabled: false
+salda_ga_fallback_soft_label_dose: 0.01
+salda_ga_stop_epoch: 20
+max_train_steps: -1
+
+# Timing runs never open Vtest or write model checkpoints.
+final_test: false
+save_checkpoint: false
+save_best_only: false
+
+# Measure ordinary end-to-end execution without diagnostic synchronization.
+salda_ga_audit_mode: false
+salda_ga_profile_components: false
+
+run_name: stl10_salda_ga_timing20_last_score_seed0
+output_name: metrics.csv
+wandb_run_name: stl10_salda_ga_timing20_last_score_seed0

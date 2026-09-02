@@ -1,0 +1,13 @@
+base: salda_ga_origin_baseline30.yaml
+
+run_name: stl10_preact_resnet18_salda_ga_origin_impulse30
+salda_ga_mode: soft_label
+
+# Every yielded row scores all ten labels. The original GT is masked, the
+# highest positive gain is selected, and no negative-gain fallback is allowed.
+salda_ga_maximum_rows: 128
+salda_ga_minimum_gain: 0.0
+salda_ga_minimum_label_margin: 0.0
+salda_ga_minimum_relative_label_margin: 0.0
+salda_ga_fallback_enabled: false
+salda_ga_soft_label_dose: 0.1

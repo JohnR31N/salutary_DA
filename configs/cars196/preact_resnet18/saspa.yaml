@@ -1,0 +1,6 @@
+base: baseline_syncdist.yaml
+
+method: saspa
+saspa_manifest: ./data/saspa/cars196
+saspa_replacement_probability: 0.4
+run_name: cars196_preact_resnet18_saspa_syncdist
